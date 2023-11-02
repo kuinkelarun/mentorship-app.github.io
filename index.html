@@ -1,6 +1,10 @@
+  
 <!DOCTYPE html>
 <html>
 <head>
+    
+    <CONTENT="text/html; charset=UTF-8"> /*Added later*/
+        
     <title>Mentorship Form</title>
     <style>
         body {
@@ -73,68 +77,65 @@
         input[type="submit"]:hover {
             background-color: #0056b3;
         }
+
+        input[type="tel"] {
+          width: 100%;
+          padding: 10px;
+          margin-top: 5px;
+          margin-bottom: 15px;
+          border: 1px solid #ccc;
+          border-radius: 3px;
+        }
         
     </style>
 </head>
 <body>
+
+    <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00D8b000002wHQW" method="POST">
+    <input type=hidden name="orgid" value="00D8b000002wHQW">
+    <input type=hidden name="retURL" value="https://www.salesforce.com/">
+    
     <div class="container">
 
         <h1>Mentorship Request Form</h1> <!-- Title added here -->
 
         <form action="process_form.php" method="post">
+
             <div class="form-group">
-                <label for="protegeName">Full Name*:</label>
-                <input type="text" id="protegeName" name="protegeName" required placeholder="John Doe">
+                <label for="firstName">First Name:<input  id="00N8b00000Ii9p3" maxlength="50" name="00N8b00000Ii9p3" size="20" type="text" placeholder="John" /></label>
             </div>
 
             <div class="form-group">
-                <label for="firstName">First Name:</label>
-                <input type="text" id="firstName" name="firstName" placeholder="John">
+                <label for="lastName">Last Name*:<input  id="00N8b00000Ii9p8" maxlength="50" name="00N8b00000Ii9p8" size="20" type="text" required placeholder="Doe" /><br></label>
+            </div>
+
+            <label for="email">Email*:</label>
+			      <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9_\.]+@accenture.com$" required placeholder="Enter Accenture email."/>
+            
+            <label for="phone">Phone:</label>
+            <input id="phone" name="phone" type="tel" pattern="(\(\d{3}\)|\d{3})[-\s]\d{3}-\d{4}" maxlength="40" size="20" placeholder="Enter phone number (optional)." />
+            <br>
+
+            <div class="form-group">
+                <label for="preferredMentor">Preferred Mentor(s):<input  id="00N8b00000Ii9pI" maxlength="100" name="00N8b00000Ii9pI" size="20" type="text" placeholder="Mentor's Name" /><br></label>
             </div>
 
             <div class="form-group">
-                <label for="lastName">Last Name*:</label>
-                <input type="text" id="lastName" name "lastName" required placeholder="Doe">
+                <label for="mentorshipArea">Desired Mentorship Area*:<input  id="00N8b00000Ii9pS" maxlength="50" name="00N8b00000Ii9pS" size="20" type="text" required placeholder="e.g., Salesforce Marketing Cloud, Service Cloud" /><br></label>
             </div>
 
             <div class="form-group">
-                <label for="email">Email*:</label>
-                <input type="email" id="email" name="email" required placeholder="johndoe@example.com">
+                <label for="shortDescription">Short Description (max 255 characters):<input  id="00N8b00000Ii9pr" maxlength="255" name="00N8b00000Ii9pr" size="20" type="text" placeholder="Briefly describe your mentorship goals" /><br></label>
             </div>
 
             <div class="form-group">
-                <label for="contact">Contact*:</label>
-                <input type="text" id="contact" name="contact" value="Default Contact" readonly>
-            </div>
-
-            <div class="form-group">
-                <label for="mentor">Mentor*:</label>
-                <input type="text" id="mentor" name="mentor" value="Default Mentor" readonly>
-            </div>
-
-            <div class="form-group">
-                <label for="location">Location:</label>
-                <input type="text" id="location" name="location" placeholder="City, State">
-            </div>
-
-            <div class="form-group">
-                <label for="preferredMentor">Preferred Mentor(s): (optional)</label>
-                <input type="text" id="preferredMentor" name="preferredMentor" placeholder="Enter name(s) of the preferred mentor(s).">
-            </div>
-
-            <div class="form-group">
-                <label for="mentorshipArea">Desired Mentorship Area*:</label>
-                <input type="text" id="mentorshipArea" name="mentorshipArea" required placeholder="e.g., Salesforce Marketing Cloud, Data Cloud, etc.">
-            </div>
-
-            <div class="form-group">
-                <label for="shortDescription">Short Description (max 255 characters):</label>
-                <textarea id="shortDescription" name="shortDescription" placeholder="Briefly describe your mentorship need" maxlength="255"></textarea>
+                <label for="location">Location*:<input  id="00N8b00000Ii9pD" maxlength="75" name="00N8b00000Ii9pD" size="20" type="text" required placeholder="City, State" /><br></label>
             </div>
 
             <div class="submit-button">
                 <input type="submit" value="Submit">
             </div>
+            
         </form>
     </div>
 </body>
